@@ -1,0 +1,26 @@
+{% extends 'base.html'%}
+
+{% block title %} Runner Page {% endblock %}
+
+
+{% block content %}
+
+    <div class="col">
+        <div class="h-100 p-5 bg-light border rounded-3 text-center">
+            <h1>Add quest</h1>
+            <form method="POST">
+                {% csrf_token %}
+                {{ form.quest}} <br>
+                {{ form.correct}} <br>
+                {{ form.wrong1}} <br>
+                {{ form.wrong2}} <br>
+                {{ form.wrong3}} <br>
+                <input class="w-25 mt-3 btn btn-outline-primary " type="submit" value="ADD">
+            </form>
+
+        </div>
+    </div>
+    
+    
+{% endblock %}
+

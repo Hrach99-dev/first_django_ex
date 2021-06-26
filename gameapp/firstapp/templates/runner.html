@@ -1,0 +1,18 @@
+{% extends 'base.html'%}
+
+{% block title %} Runner Page {% endblock %}
+
+
+{% block content %}
+
+    <div class="col">
+        <div class="h-100 p-5 bg-light border rounded-3 text-center">
+            <h1>Welcome to runner</h1>
+            <a href="{% url 'game' %}" class="btn btn-outline-primary">Play</a> <br>
+            <a href="{% url 'addquest' %}" class="btn btn-outline-primary mt-3">Add Quest</a>
+        </div>
+    </div>
+    
+    
+{% endblock %}
+

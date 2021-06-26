@@ -1,0 +1,21 @@
+{% extends 'base.html'%}
+
+{% block title %} Home Page {% endblock %}
+
+
+{% block content %}
+    
+            <form method="POST">
+                {% csrf_token %}
+                {{ form.num1}} <br>
+                {{ form.num2}} <br>
+                {{ form.oper}} <br>
+                <input class="w-25 mt-3 btn btn-outline-primary " type="submit" value="Calc">
+            </form>
+            
+
+            <p class="mt-3">Calc!</p>
+            {% for i in numbers %}
+                <p>{{i.num1}} {{i.oper}} {{i.num2}} = {{i.result}} </p>
+            {% endfor %}
+{% endblock %}

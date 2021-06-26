@@ -1,0 +1,18 @@
+{% extends 'base.html'%}
+
+{% block title %} Home Page {% endblock %}
+
+
+{% block content %}
+
+    <div class="col">
+        <div class="h-100 p-5 bg-light border rounded-3 text-center">
+            <a href="{% url 'about' %}">Calculator</a>
+            <a href="{% url 'runner' %}">Game</a>
+        </div>
+    </div>
+    <!-- {% comment %} <a href="{% url 'about' %}">About</a> {% endcomment %} -->
+    
+{% endblock %}
+
+<!-- class='w-50 mt-3 border pt-2 pb-2 border-primary') -->
